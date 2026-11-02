@@ -1,5 +1,7 @@
 # MotionScore 肩部上举动作分析
 
+发布账号：`haducfvuikhai10946-beep`；仓库：<https://github.com/haducfvuikhai10946-beep/motionscore-shoulder>。
+
 本仓库提供与 2026-10-21 第四轮论文版本对应的独立研究代码：
 视频 → 身体关键点 → BiLSTM–CRF 四阶段 → 13 项运动学特征 → 映射 → 分项偏离、MotionScore 和参考百分位。
 

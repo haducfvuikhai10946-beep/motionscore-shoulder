@@ -2,6 +2,8 @@
 
 [中文说明](README_zh.md)
 
+Repository: https://github.com/haducfvuikhai10946-beep/motionscore-shoulder
+
 Research software for seated bilateral shoulder raises from monocular video.
 The pipeline combines RTMPose body coordinates, a BiLSTM–CRF phase parser,
 thirteen kinematic descriptors, optional cross-cycle mapping, and a transparent

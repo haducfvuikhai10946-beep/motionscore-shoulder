@@ -1,5 +1,5 @@
 {
-  "code_files": 54,
+  "code_files": 55,
   "dataset_subjects": 316,
   "original_identifier_matches": 0,
   "credential_pattern_matches": 0,
@@ -15,6 +15,7 @@
     "README_zh.md",
     "THIRD_PARTY_NOTICES.md",
     "configs/paper_protocol.json",
+    "configs/publication.json",
     "configs/release_assets.json",
     "docs/DATA_CARD.md",
     "docs/FEATURES.md",

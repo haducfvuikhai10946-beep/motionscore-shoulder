@@ -24,7 +24,7 @@ test = ["pytest>=8,<9"]
 motionscore = "motionscore.cli:main"
 
 [project.urls]
-Repository = "https://github.com/jackcr7900/motionscore-shoulder"
+Repository = "https://github.com/haducfvuikhai10946-beep/motionscore-shoulder"
 
 [tool.setuptools.packages.find]
 where = ["src"]

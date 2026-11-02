@@ -6,8 +6,15 @@ from pathlib import Path
 
 def main():
     p=argparse.ArgumentParser();p.add_argument("--gh",default="gh")
-    p.add_argument("--assets",type=Path);args=p.parse_args()
-    root=Path(__file__).resolve().parents[1];repo="jackcr7900/motionscore-shoulder";tag="v1.0.0"
+    p.add_argument("--assets",type=Path)
+    p.add_argument("--verify-only",action="store_true",help="Verify publication configuration and asset hashes without login or network writes")
+    args=p.parse_args()
+    root=Path(__file__).resolve().parents[1]
+    publication=json.loads((root/"configs/publication.json").read_text("utf-8"))
+    repo,tag=publication["repository"],publication["tag"]
+    owner=repo.split("/")[0]
+    if len(repo.split("/"))!=2 or not owner or not repo.split("/")[1]:
+        raise SystemExit("Invalid publication repository")
     gh=shutil.which(args.gh) or args.gh
     def run(*command,check=True,capture=False):
         result=subprocess.run([str(v) for v in command],cwd=root,text=True,capture_output=capture)
@@ -15,14 +22,11 @@ def main():
             if capture:print(result.stderr.strip())
             raise SystemExit("Command failed; correct the reported issue and rerun. No force push or asset overwrite was attempted.")
         return result
-    run(gh,"auth","status")
-    account=run(gh,"api","user","--jq",".login",capture=True).stdout.strip()
-    if account!="jackcr7900":raise SystemExit("Login must be jackcr7900; current account: "+account)
-    if run("git","status","--porcelain",capture=True).stdout.strip():raise SystemExit("Review and commit local changes before publishing")
-    if run("git","branch","--show-current",capture=True).stdout.strip()!="main":raise SystemExit("Expected local main branch")
     manifest=json.loads((root/"configs/release_assets.json").read_text("utf-8"))
     assets=(args.assets or root/"release-assets/packages").resolve()
     for item in manifest["assets"]:
+        expected_url=f"https://github.com/{repo}/releases/download/{tag}/"+item["name"]
+        if item["url"]!=expected_url:raise SystemExit("Asset download URL does not match publication repository: "+item["name"])
         path=(assets/item["name"]).resolve()
         if not path.is_relative_to(assets) or Path(item["name"]).name!=item["name"]:raise SystemExit("Unsafe asset path")
         digest=hashlib.sha256()
@@ -30,6 +34,17 @@ def main():
             for block in iter(lambda:stream.read(2**20),b""):digest.update(block)
         if digest.hexdigest()!=item["sha256"]:raise SystemExit("Checksum mismatch: "+item["name"])
         print("Verified",item["name"],flush=True)
+    for name in ["CITATION.cff","pyproject.toml"]:
+        if "https://github.com/"+repo not in (root/name).read_text("utf-8"):
+            raise SystemExit("Repository metadata mismatch: "+name)
+    if args.verify_only:
+        print("Publication preflight passed for "+repo+" ("+tag+"); no remote operations performed.",flush=True)
+        return
+    run(gh,"auth","status")
+    account=run(gh,"api","user","--jq",".login",capture=True).stdout.strip()
+    if account!=owner:raise SystemExit("Login must be "+owner+"; current account: "+account)
+    if run("git","status","--porcelain",capture=True).stdout.strip():raise SystemExit("Review and commit local changes before publishing")
+    if run("git","branch","--show-current",capture=True).stdout.strip()!="main":raise SystemExit("Expected local main branch")
     run(gh,"auth","setup-git")
     existing=run(gh,"repo","view",repo,"--json","nameWithOwner",capture=True,check=False)
     if existing.returncode:
