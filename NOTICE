@@ -1,0 +1,6 @@
+MotionScore: phase-aware shoulder-raise profiling
+Copyright 2026 MotionScore contributors.
+
+This software implements task-specific kinematic reference-deviation scoring.
+External libraries and pretrained pose weights retain their own notices and licenses.
+See THIRD_PARTY_NOTICES.md and docs/DATA_CARD.md.

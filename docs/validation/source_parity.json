@@ -1,0 +1,350 @@
+{
+  "source_version": "paper-round4-20261021",
+  "new_fits": 0,
+  "subject_count": 316,
+  "development": 242,
+  "comparison": 74,
+  "retained_cycles": 2124,
+  "features_max_abs_error": 0.0,
+  "phase_input_max_abs_error": 0.0,
+  "scoring": [
+    {
+      "scope": "full242",
+      "fold": null,
+      "backend": "Identity",
+      "rows": 726,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "full242",
+      "fold": null,
+      "backend": "Ridge",
+      "rows": 726,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "full242",
+      "fold": null,
+      "backend": "ElasticNet",
+      "rows": 726,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "full242",
+      "fold": null,
+      "backend": "LightGBM",
+      "rows": 726,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "fixed74",
+      "fold": null,
+      "backend": "Identity",
+      "rows": 222,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "fixed74",
+      "fold": null,
+      "backend": "Ridge",
+      "rows": 222,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "fixed74",
+      "fold": null,
+      "backend": "ElasticNet",
+      "rows": 222,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "fixed74",
+      "fold": null,
+      "backend": "LightGBM",
+      "rows": 222,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer0",
+      "fold": 0,
+      "backend": "Identity",
+      "rows": 147,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer0",
+      "fold": 0,
+      "backend": "Ridge",
+      "rows": 147,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer0",
+      "fold": 0,
+      "backend": "ElasticNet",
+      "rows": 147,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer0",
+      "fold": 0,
+      "backend": "LightGBM",
+      "rows": 147,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer1",
+      "fold": 1,
+      "backend": "Identity",
+      "rows": 147,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer1",
+      "fold": 1,
+      "backend": "Ridge",
+      "rows": 147,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer1",
+      "fold": 1,
+      "backend": "ElasticNet",
+      "rows": 147,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer1",
+      "fold": 1,
+      "backend": "LightGBM",
+      "rows": 147,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer2",
+      "fold": 2,
+      "backend": "Identity",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer2",
+      "fold": 2,
+      "backend": "Ridge",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer2",
+      "fold": 2,
+      "backend": "ElasticNet",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer2",
+      "fold": 2,
+      "backend": "LightGBM",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer3",
+      "fold": 3,
+      "backend": "Identity",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer3",
+      "fold": 3,
+      "backend": "Ridge",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer3",
+      "fold": 3,
+      "backend": "ElasticNet",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer3",
+      "fold": 3,
+      "backend": "LightGBM",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer4",
+      "fold": 4,
+      "backend": "Identity",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer4",
+      "fold": 4,
+      "backend": "Ridge",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer4",
+      "fold": 4,
+      "backend": "ElasticNet",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    },
+    {
+      "scope": "outer4",
+      "fold": 4,
+      "backend": "LightGBM",
+      "rows": 144,
+      "max_errors": {
+        "S": 0.0,
+        "D": 0.0,
+        "mapped_z": 0.0
+      },
+      "band_equal": true
+    }
+  ],
+  "video_anonymization_parity": "separate analysis; cached poses preserve paper coordinates",
+  "historical_sources_read_only": true
+}

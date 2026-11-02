@@ -1,0 +1,23 @@
+{
+  "videos": 316,
+  "frames": 480320,
+  "audio_streams": 0,
+  "fps": 20,
+  "resolution": [
+    640,
+    480
+  ],
+  "source_creation_metadata_present": false,
+  "file_hashes_verified": true,
+  "fallback_full_mask_frames": 0,
+  "head_mask_joint_center_intersections": 6143,
+  "redaction_policy_versions": [
+    2
+  ],
+  "scene_context": "room and equipment retained; opaque head and selective additional-person boxes",
+  "visual_review": "Assistant inspected all ten contact sheets: two sampled frames from each of 316 recordings (632 frames), with scene context retained and primary heads covered.",
+  "privacy_limit": "No guarantee of irreversible anonymization or of complete per-frame visual privacy review",
+  "sampled_review_frames": 632,
+  "reviewer_type": "AI assistant, not independent human validation",
+  "full_frame_by_frame_privacy_review": false
+}

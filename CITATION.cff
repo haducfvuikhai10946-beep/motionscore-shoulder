@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this software and the accompanying manuscript when available."
+title: "MotionScore: phase-aware shoulder-raise profiling"
+type: software
+authors:
+  - name: "MotionScore contributors"
+version: 1.0.0
+date-released: 2026-11-02
+license: Apache-2.0
+repository-code: "https://github.com/jackcr7900/motionscore-shoulder"

@@ -1,0 +1,208 @@
+{
+  "participants": 316,
+  "retained_cycles": 2124,
+  "feature_max_abs_error": 0.0,
+  "phase_model_checked": false,
+  "phase_label_disagreements": null,
+  "score_checks": [
+    {
+      "scope": "full",
+      "backend": "Identity",
+      "rows": 726,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "full",
+      "backend": "Identity",
+      "rows": 222,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "full",
+      "backend": "Ridge",
+      "rows": 726,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "full",
+      "backend": "Ridge",
+      "rows": 222,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "full",
+      "backend": "ElasticNet",
+      "rows": 726,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "full",
+      "backend": "ElasticNet",
+      "rows": 222,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "full",
+      "backend": "LightGBM",
+      "rows": 726,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "full",
+      "backend": "LightGBM",
+      "rows": 222,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold0",
+      "backend": "Identity",
+      "rows": 147,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold0",
+      "backend": "Ridge",
+      "rows": 147,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold0",
+      "backend": "ElasticNet",
+      "rows": 147,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold0",
+      "backend": "LightGBM",
+      "rows": 147,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold1",
+      "backend": "Identity",
+      "rows": 147,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold1",
+      "backend": "Ridge",
+      "rows": 147,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold1",
+      "backend": "ElasticNet",
+      "rows": 147,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold1",
+      "backend": "LightGBM",
+      "rows": 147,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold2",
+      "backend": "Identity",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold2",
+      "backend": "Ridge",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold2",
+      "backend": "ElasticNet",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold2",
+      "backend": "LightGBM",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold3",
+      "backend": "Identity",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold3",
+      "backend": "Ridge",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold3",
+      "backend": "ElasticNet",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold3",
+      "backend": "LightGBM",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold4",
+      "backend": "Identity",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold4",
+      "backend": "Ridge",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold4",
+      "backend": "ElasticNet",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    },
+    {
+      "scope": "fold4",
+      "backend": "LightGBM",
+      "rows": 144,
+      "score_max_abs_error": 0.0
+    }
+  ],
+  "out_of_fold_metrics": [
+    {
+      "backend": "Identity",
+      "subjects": 242,
+      "MSE": 0.2024040460567009,
+      "ICC_A1": 0.9081519049296269,
+      "Spearman": 0.8944810864841044
+    },
+    {
+      "backend": "Ridge",
+      "subjects": 242,
+      "MSE": 0.17777384564059762,
+      "ICC_A1": 0.9116122045913128,
+      "Spearman": 0.9015927327256387
+    },
+    {
+      "backend": "ElasticNet",
+      "subjects": 242,
+      "MSE": 0.1793154005240954,
+      "ICC_A1": 0.912275439918202,
+      "Spearman": 0.8991888794479013
+    },
+    {
+      "backend": "LightGBM",
+      "subjects": 242,
+      "MSE": 0.22260624421203298,
+      "ICC_A1": 0.8965511627071232,
+      "Spearman": 0.8874143166862897
+    }
+  ],
+  "limits": "Cached body poses and frozen four-backend paths; not all twelve benchmark backends, raw RGB equality or clinical validation."
+}

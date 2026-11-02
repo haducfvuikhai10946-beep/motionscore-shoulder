@@ -1,0 +1,7 @@
+include LICENSE NOTICE README.md README_zh.md CITATION.cff requirements-reference.txt THIRD_PARTY_NOTICES.md
+recursive-include configs *.json
+recursive-include docs *.md *.json
+recursive-include docs *.jpg
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include examples *.csv *.json *.npz

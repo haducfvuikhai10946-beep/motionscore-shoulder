@@ -1,0 +1,37 @@
+[
+  {
+    "fold": 0,
+    "device": "cpu",
+    "heldout_subjects": 49,
+    "frames": 74480,
+    "label_disagreements": 0
+  },
+  {
+    "fold": 1,
+    "device": "cpu",
+    "heldout_subjects": 49,
+    "frames": 74480,
+    "label_disagreements": 0
+  },
+  {
+    "fold": 2,
+    "device": "cpu",
+    "heldout_subjects": 48,
+    "frames": 72960,
+    "label_disagreements": 0
+  },
+  {
+    "fold": 3,
+    "device": "cpu",
+    "heldout_subjects": 48,
+    "frames": 72960,
+    "label_disagreements": 1
+  },
+  {
+    "fold": 4,
+    "device": "cpu",
+    "heldout_subjects": 48,
+    "frames": 72960,
+    "label_disagreements": 0
+  }
+]

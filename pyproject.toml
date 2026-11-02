@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77,<81", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "motionscore-shoulder"
+version = "1.0.0"
+description = "Reproducible phase-aware shoulder-raise kinematics and reference-deviation scoring"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "MotionScore contributors"}]
+dependencies = ["numpy>=1.26,<3", "scipy>=1.11,<2", "pandas>=2,<3"]
+
+[project.optional-dependencies]
+phase = ["torch>=2.1,<3", "pytorch-crf==0.7.2"]
+trees = ["lightgbm==4.6.0"]
+train = ["scikit-learn==1.7.2", "lightgbm==4.6.0", "torch>=2.1,<3", "pytorch-crf==0.7.2"]
+video = ["opencv-python>=4.8,<5"]
+test = ["pytest>=8,<9"]
+
+[project.scripts]
+motionscore = "motionscore.cli:main"
+
+[project.urls]
+Repository = "https://github.com/jackcr7900/motionscore-shoulder"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

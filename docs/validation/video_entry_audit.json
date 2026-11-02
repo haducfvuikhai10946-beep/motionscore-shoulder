@@ -1,0 +1,53 @@
+{
+  "recordings_tested": 1,
+  "participant_id": "S0e4eb342ae",
+  "input": "processed video with scene context",
+  "source_hashes": {
+    "runtime_input_0": "bce3a6c99bcb286ec8ac4f4dd4c6583f1ec04290b13f11757e2e76c9948dc1aa",
+    "runtime_input_1": "05d8511e7b3fabc62e27d2f624179e004ad14ee63a86ca9d9d22c88f3db0eee1",
+    "runtime_input_2": "532dc32cd9c6ba4ea3300fdc0e0a1da622dd9f53510a1998968f7958e08b2a6b",
+    "runtime_input_3": "5e55be2a03f6e5dcd14d088afc4ae5afe94a4f9de93c22e5deb725ad0eee899d"
+  },
+  "frames": 1520,
+  "fps": 20.0,
+  "body_coordinate_abs_difference_median_pixels": 0.70601452636717,
+  "body_coordinate_abs_difference_max_pixels": 9.90841381835935,
+  "status": "executed",
+  "retained_cycles_processed": 7,
+  "retained_cycles_cached": 7,
+  "MotionScore_processed": 50.05693187455747,
+  "MotionScore_cached": 49.57151072600291,
+  "score_difference": 0.48542114855455765,
+  "feature_order": [
+    "angle_rom_mean_deg",
+    "symmetry_rom_diff_deg",
+    "upward_mean_abs_acceleration_deg_s2",
+    "downward_mean_abs_acceleration_deg_s2",
+    "overall_mean_abs_velocity_deg_s",
+    "overall_mean_abs_acceleration_deg_s2",
+    "peakhold_fraction",
+    "bilateral_velocity_asymmetry",
+    "trunk_tilt_rms_deg",
+    "trunk_tilt_cycle_sd_deg",
+    "shoulder_center_sway_width",
+    "pelvis_center_sway_width",
+    "velocity_peak_mean_ratio"
+  ],
+  "feature_difference": [
+    0.4740498052726565,
+    -0.06292969915261892,
+    -19.95760610446837,
+    -10.785947796181745,
+    0.47994863399311427,
+    -5.671170312253466,
+    -0.0018388065886252858,
+    0.003510842900650138,
+    0.0010067749945997795,
+    -0.011266523444842191,
+    0.004196732843966242,
+    -0.005984622165051355,
+    -0.0007926901193364699
+  ],
+  "interpretation": "One processed recording checks execution and quantifies changed inputs, not cohort equivalence or generalization.",
+  "wall_seconds": 513.3104859000014
+}

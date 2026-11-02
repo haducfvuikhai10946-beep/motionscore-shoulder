@@ -1,0 +1,44 @@
+[
+  {
+    "scope": "full",
+    "backend": "Ridge",
+    "training_subjects": 242,
+    "prediction_max_abs_error": 0.0,
+    "comparison_subjects_used": 0
+  },
+  {
+    "scope": "fold0",
+    "backend": "Ridge",
+    "training_subjects": 193,
+    "prediction_max_abs_error": 0.0,
+    "comparison_subjects_used": 0
+  },
+  {
+    "scope": "fold1",
+    "backend": "Ridge",
+    "training_subjects": 193,
+    "prediction_max_abs_error": 0.0,
+    "comparison_subjects_used": 0
+  },
+  {
+    "scope": "fold2",
+    "backend": "Ridge",
+    "training_subjects": 194,
+    "prediction_max_abs_error": 0.0,
+    "comparison_subjects_used": 0
+  },
+  {
+    "scope": "fold3",
+    "backend": "Ridge",
+    "training_subjects": 194,
+    "prediction_max_abs_error": 0.0,
+    "comparison_subjects_used": 0
+  },
+  {
+    "scope": "fold4",
+    "backend": "Ridge",
+    "training_subjects": 194,
+    "prediction_max_abs_error": 0.0,
+    "comparison_subjects_used": 0
+  }
+]

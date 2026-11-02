@@ -1,0 +1,39 @@
+name: Reproducibility checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      verify_release:
+        description: Download public model/data assets and verify historical goldens
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: python -m pip install -e '.[test]'
+      - run: python -m pytest -q
+      - run: python -m pip install build && python -m build
+  release-verification:
+    if: github.event_name == 'workflow_dispatch' && inputs.verify_release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: python -m pip install -r requirements-reference.txt && python -m pip install -e . --no-deps
+      - run: python scripts/download_release.py --kind models && python scripts/download_release.py --kind dataset
+      - run: python scripts/verify_release.py --data downloads/dataset-v1.0.0 --models downloads/models-v1.0.0 --phases
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: numerical-verification
+          path: results/

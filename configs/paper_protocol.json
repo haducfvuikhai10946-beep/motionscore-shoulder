@@ -1,0 +1,62 @@
+{
+  "feature_names": [
+    "angle_rom_mean_deg",
+    "symmetry_rom_diff_deg",
+    "upward_mean_abs_acceleration_deg_s2",
+    "downward_mean_abs_acceleration_deg_s2",
+    "overall_mean_abs_velocity_deg_s",
+    "overall_mean_abs_acceleration_deg_s2",
+    "peakhold_fraction",
+    "bilateral_velocity_asymmetry",
+    "trunk_tilt_rms_deg",
+    "trunk_tilt_cycle_sd_deg",
+    "shoulder_center_sway_width",
+    "pelvis_center_sway_width",
+    "velocity_peak_mean_ratio"
+  ],
+  "fps": 20,
+  "savgol_window": 9,
+  "savgol_order": 2,
+  "boundary_margin_frames": 10,
+  "seed_split": 20261010,
+  "phase_epochs": 6,
+  "phase_batch": 8,
+  "phase_lr": 0.001,
+  "phase_clip": 5,
+  "phase_seed_full": 20261540,
+  "phase_hidden": 128,
+  "phase_dropout": 0.2,
+  "phase_seed_fold_formula": "20261040 + fold",
+  "mapping_configs": {
+    "Ridge": {
+      "alpha": 1.0,
+      "solver": "svd"
+    },
+    "ElasticNet": {
+      "alpha": 0.03,
+      "l1_ratio": 0.3,
+      "max_iter": 10000,
+      "tol": 1e-05
+    },
+    "LightGBM": {
+      "n_estimators": 200,
+      "num_leaves": 7,
+      "learning_rate": 0.05,
+      "max_depth": -1,
+      "min_child_samples": 20,
+      "reg_lambda": 1.0,
+      "n_jobs": 2,
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    }
+  },
+  "threshold_policy": "Frozen common historical T-JEPA development cutpoints; do not recalibrate per backend",
+  "amplitude_anchor": "two-sided reference median; one-sided F1 is sensitivity analysis only",
+  "excluded_experiments": [
+    "T-JEPA encoder training",
+    "other neural/tabular benchmark backends",
+    "fitness-record linkage",
+    "latency hardware replication"
+  ]
+}

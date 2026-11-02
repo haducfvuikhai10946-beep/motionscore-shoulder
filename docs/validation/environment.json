@@ -1,0 +1,22 @@
+{
+  "python": "3.10.20",
+  "os": "Windows",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.1",
+    "pandas": "2.0.3",
+    "torch": "2.1.0+cu118",
+    "pytorch-crf": "0.7.2",
+    "lightgbm": "4.6.0",
+    "scikit-learn": "1.7.2",
+    "opencv-python": "4.8.0.76",
+    "mmengine": "0.10.7",
+    "mmcv": "2.1.0",
+    "mmdet": "3.2.0",
+    "mmpose": "1.3.2",
+    "setuptools": "80.9.0"
+  },
+  "full_environment_scope": "All frozen numerical checks, fold CUDA/CPU comparison, mapping retraining, one processed-video inference and phase training smoke test",
+  "clean_environment_scope": "New isolated venv; installed wheel; base/Ridge example and all 316 cached-pose/four-backend checks; no PyTorch installed because its download was unavailable",
+  "training_limit": "No complete six-epoch frontend retraining performed for release verification"
+}

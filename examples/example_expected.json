@@ -1,0 +1,24 @@
+{
+  "backend": "Ridge",
+  "row_order": [
+    "full",
+    "odd",
+    "even"
+  ],
+  "MotionScore": [
+    50.25727008323368,
+    48.70008916362105,
+    50.82851996995575
+  ],
+  "D": [
+    0.9897618759312791,
+    1.0533843308586786,
+    0.9673994060639387
+  ],
+  "band": [
+    0,
+    0,
+    0
+  ],
+  "golden_source": "historical frozen program, not regenerated package outputs"
+}
