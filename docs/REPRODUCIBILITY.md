@@ -49,6 +49,11 @@ Use `--device cuda:0` with `verify_phase_folds.py` for the original fold-inferen
 device. Cached fold features remain the input to exact numerical table reproduction.
 Full six-epoch neural retraining has not been rerun for release certification;
 the training path is covered by a finite-loss/gradient/update smoke test.
+The existing Windows research environment printed a native diagnostic while
+PyTorch tried to import an unrelated optional ONNX Runtime module during optimizer
+initialization; the smoke tests still exited successfully. ONNX Runtime is not
+required by this package. Use a fresh environment for phase retraining rather
+than copying the historical environment wholesale.
 
 ## Statistical unit and leakage controls
 
